@@ -4,7 +4,8 @@ import { Component, Input,Output, EventEmitter} from '@angular/core';
 @Component({
   selector: 'contador',
   templateUrl: './output-property.component.html',
-  styleUrls: ['./output-property.component.css']
+  styleUrls: ['./output-property.component.css']//,
+  //outputs:['mudouValor']
 })
 export class OutputPropertyComponent  {
 
