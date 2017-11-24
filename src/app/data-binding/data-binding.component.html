@@ -1,0 +1,118 @@
+<!--
+  <section class="property-binding">
+<article>
+  <h3>Intepolação</h3>
+
+  <p>Para melhor acesse: {{url}} </p>
+  <p>soma = {{1+2}}</p>
+
+  <p>true || false = {{verdadeiro || falso}}</p>
+  <p>true && false = {{verdadeiro && falso}}</p>
+  <p>getValor = {{getValor()}}</p>
+
+</article>
+
+<article>
+    <h3>Property Binding</h3>
+    <img src="{{ imgUrl }}"/> 
+    <img [src]="imgUrl"/>
+    <img bind-src="imgUrl"/> 
+</article>
+
+</section>
+
+<section class="event-bindings">
+  <article>
+    <h3> Event bindings</h3>
+
+    <div>
+      <button class="btn btn-primary" 
+              (click)="botaoClicado()">Clique-me</button>
+
+              <br/><br/>
+
+      <input type="text"
+             (keyup)="onKeyUp($event)"
+             (keyup.enter)="salvaValor($event.target.value)"
+             #campoInput>
+             
+             <br/><br/>
+             <input type="text"
+             (keyup)="onKeyUp($event)"
+             (keyup.enter)="salvaValor(campoInput.value)"
+             #campoInput>
+            <br/><br/>
+
+            <span (mouseover)="onMouseOverOut()"
+                  (mouseout)="onMouseOverOut()"
+                  [class.hightlight]="isMouseOver">Passe o mouse aqui</span>
+<h5>Valor keyup {{valorInput}}</h5>
+<h5>Valor keyup.enter {{valorSalvo}}</h5>
+
+    </div>
+  </article>
+
+</section>
+
+-->
+
+<!--<section class="two-way-binding">
+  <article>
+    <h3>Two way Data binding</h3>
+    <form class="form-inline" role="form">
+      <div class="form-group">
+        <input name="input1" class="form-control" type="text" [value]="nome" (input)="nome = $event.target.value" />
+      </div>
+      <div class="form-group">
+        <input name="input2" class="form-control" type="text" [ngModel]="nome" (ngModelChange)="nome = $event" />
+      </div>
+      <div class="form-group">
+        <input name="input3" class="form-control" type="text" [(ngModel)]="nome" />
+      </div>
+      <div class="form-group">
+        <input name="input4" class="form-control" type="text" bindon-ngModel="nome" />
+      </div>
+      <p>voce digitou : {{nome}}</p>
+      <br/>
+      <br/>
+
+
+      <div class="form-group">
+        Nome:
+        <input name="nome" placeholder="Nome" class="form-control" type="text" [(ngModel)]="pessoa.nome" />
+      </div>
+      <div class="form-group">
+        Idade:
+        <input name="idade" placeholder="Idade" class="form-control" type="text" [(ngModel)]="pessoa.idade" />
+      </div>
+      <div class="form-group">
+        Sexo:
+        <input name="sexo" placeholder="Sexo" class="form-control" type="text" [(ngModel)]="pessoa.sexo" />
+      </div>
+      <p>Meu nome é {{pessoa.nome}} tenho {{pessoa.idade}} anos de sexo {{getSexoPessoa()}}</p>
+
+    </form>
+  </article>
+
+</section>-->
+
+<!--<section class="input-output-properties">
+  <article>
+    <h3>Input/Output Properties</h3>
+    <app-curso [nomeCurso1]="nomeDoCursoExemplo1" [nome]="nomeDoCurso" ></app-curso>
+
+  </article>
+
+  
+</section>-->
+
+<section class="input-output-properties">
+    <article>
+      <h3>Output Properties</h3>
+
+       <contador [valor]="valorInicial"
+       (mudouValor)="onMudouValor($event)"></contador>
+
+    </article>
+
+</section>
